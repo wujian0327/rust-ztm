@@ -1,4 +1,0 @@
-[submodule "libs/ztm"]
-	path = libs/ztm
-	url = https://github.com/wujian0327/ztm.git
-    ignore = dirty

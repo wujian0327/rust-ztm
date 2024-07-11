@@ -85,6 +85,23 @@ mod tests {
     }
 
     #[tokio::test]
+    async fn test_start_hub() {
+        util::init_logger("info");
+        let port = 8888;
+        start_hub(port, vec![], "localhost:9999");
+        thread::sleep(std::time::Duration::from_secs(1));
+
+        let resp = reqwest::get(format!("http://127.0.0.1:{}/api/version", port))
+            .await
+            .expect("ztm hub didn't start");
+        tracing::debug!("resp: {:?}", resp);
+        assert!(resp.status().is_success());
+        tracing::info!("ztm hub start success");
+
+        exit_ztm();
+    }
+
+    #[tokio::test]
     #[should_panic]
     /// didn't support multiple agent
     async fn test_start_multiple_agent() {
