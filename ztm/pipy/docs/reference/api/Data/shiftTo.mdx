@@ -1,0 +1,26 @@
+---
+title: Data.shiftTo()
+api: Data.shiftTo
+---
+
+## Description
+
+<Summary/>
+
+The _scanner_ parameter will be called once for each byte in _Data_. It returns truthy to indicate the last byte to shift out. Compare to [shiftWhile()](/reference/api/Data/shiftWhile).
+
+## Syntax
+
+``` js
+data.shift(byte => shouldKeepAfter(byte))
+```
+
+## Parameters
+
+<Parameters/>
+
+## See Also
+
+* [Data](/reference/api/Data)
+* [shift()](/reference/api/Data/shift)
+* [shiftWhile()](/reference/api/Data/shiftWhile)

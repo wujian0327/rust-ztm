@@ -1,0 +1,33 @@
+---
+title: Data.from()
+api: Data.from
+---
+
+## Description
+
+<Summary/>
+
+The following options are supported for the _encoding_ parameter:
+
+- _"utf8" (default)_ - Encode the text as UTF-8
+- _"hex"_ - Decode the text as hexadecimal representation
+- _"base64"_ - Decode the text as Base64 format
+- _"base64url"_ - Decode the text as Base64URL format
+
+When decoding fails, _null_ is returned to indicate the error. This is different from [new Data()](/reference/api/Data/constructor) where a runtime error is generated to stop the script.
+
+## Syntax
+
+``` js
+Data.from(text)
+Data.from(text, encoding)
+```
+
+## Parameters
+
+<Parameters/>
+
+## See Also
+
+* [Data](/reference/api/Data)
+* [new Data()](/reference/api/Data/constructor)

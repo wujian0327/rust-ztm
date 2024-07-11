@@ -1,0 +1,47 @@
+{
+  "productName": "ztm",
+  "version": "0.0.4",
+  "identifier": "com.flomesh.ztm",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "",
+    "frontendDist": "../../agent/gui"
+  },
+  "app": {
+    "windows": [
+      {
+				"dragDropEnabled": false,
+        "title": "ZTM",
+        "width": 455,
+        "height": 350,
+        "resizable": false,
+        "fullscreen": false,
+        "visible": true
+      }
+    ],
+    "security": {
+			"assetProtocol": {
+				"enable": false,
+				"scope": []
+			},
+			"dangerousDisableAssetCspModification": false,
+			"freezePrototype": false,
+      "capabilities": ["main-capability"]
+    },
+		"withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "resources": [],
+    "externalBin": ["bin/cli"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
